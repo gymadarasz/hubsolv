@@ -13,6 +13,7 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('books');
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('isbn');
@@ -20,6 +21,7 @@ class CreateBooksTable extends Migration
             $table->string('author');
             $table->string('category');
             $table->float('price');
+            $table->string('currency');
             $table->timestamps();
         });
     }
