@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use App\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class BookController extends Controller
 {
@@ -37,7 +38,16 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'isbn' => 'required|regex:/\d{3}-\d{10}/',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => 'Invalid ISBN'], 401);
+        }
+        
+        $book = Book::create($request->all());
+        return response()->json($book, 201);
     }
 
     /**

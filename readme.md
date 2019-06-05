@@ -87,3 +87,25 @@ GET:http://localhost:8000/api/books/filter?category=Linux
 GET:http://localhost:8000/api/books/filter?category=PHP
 GET:http://localhost:8000/api/books/filter?category=linux&author=Robin%20Nixon
 
+POST:http://localhost:8000/api/books/add
+data: 
+{
+    isbn: '978-1491905012',
+    title: 'Modern PHP: New Features and Good Practices',
+    author: 'Josh Lockhart',
+    category: 'PHP',
+    price: 18.99,
+    curency: 'GBP'
+}
+
+POST:http://localhost:8000/api/books/add
+data: 
+{
+    isbn: '978-INVALID-ISBN-1491905012',
+    title: 'Modern PHP: New Features and Good Practices',
+    author: 'Josh Lockhart',
+    category: 'PHP',
+    price: 18.99,
+    curency: 'GBP'
+}
+
