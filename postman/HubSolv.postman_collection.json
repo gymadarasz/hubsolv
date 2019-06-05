@@ -1,0 +1,663 @@
+{
+	"id": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+	"name": "HubSolv",
+	"description": "",
+	"order": [
+		"a2fc28c7-eacc-62d5-6885-6cf9250d2366",
+		"8bc77721-cd0b-fa8d-7e6f-caf37bf2ff0e",
+		"04cef228-6d6a-9ee6-d8f2-32ec20afaf8a",
+		"1a1e6af0-74ea-84a4-10be-d9191d1c6331",
+		"1932e67c-56a6-3969-e5e3-5b99acf1f751",
+		"464d03ed-d9b4-2699-df56-666d8090b3c4",
+		"0fbd885b-53fb-17da-73dc-b51aa1435614",
+		"9076c110-f6c6-0938-a6a1-3a5a653a5686",
+		"d4bbff6f-2a09-97d0-ad13-5e2c282612ac"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1559765910336,
+	"owner": "3966985",
+	"public": false,
+	"requests": [
+		{
+			"id": "04cef228-6d6a-9ee6-d8f2-32ec20afaf8a",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/books",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+			"data": [
+				{
+					"key": "isbn",
+					"value": "978-INVALID-ISBN-1491905012",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "Modern PHP: New Features and Good Practices",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Josh Lockhart",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "18.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currency",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Gat all Books",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1559766119302,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "0fbd885b-53fb-17da-73dc-b51aa1435614",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/books/filter?category=Linux",
+			"queryParams": [
+				{
+					"key": "category",
+					"value": "Linux",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+			"data": [
+				{
+					"key": "isbn",
+					"value": "978-INVALID-ISBN-1491905012",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "Modern PHP: New Features and Good Practices",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Josh Lockhart",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "18.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currency",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Gat all Book ISBN, filtered by category: Linux",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1559766258413,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "1932e67c-56a6-3969-e5e3-5b99acf1f751",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/books/filter?author=Christopher%20Negus",
+			"queryParams": [
+				{
+					"key": "author",
+					"value": "Christopher%20Negus",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+			"data": [
+				{
+					"key": "isbn",
+					"value": "978-INVALID-ISBN-1491905012",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "Modern PHP: New Features and Good Practices",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Josh Lockhart",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "18.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currency",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Gat all Books, filtered by Christopher Negus",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1559766182229,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "1a1e6af0-74ea-84a4-10be-d9191d1c6331",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/books/filter?author=Robin%20Nixon",
+			"queryParams": [
+				{
+					"key": "author",
+					"value": "Robin%20Nixon",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+			"data": [
+				{
+					"key": "isbn",
+					"value": "978-INVALID-ISBN-1491905012",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "Modern PHP: New Features and Good Practices",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Josh Lockhart",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "18.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currency",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Gat all Books, filtered by Robin Nixon",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1559766153758,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "464d03ed-d9b4-2699-df56-666d8090b3c4",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/books/categories",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+			"data": [
+				{
+					"key": "isbn",
+					"value": "978-INVALID-ISBN-1491905012",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "Modern PHP: New Features and Good Practices",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Josh Lockhart",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "18.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currency",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Gat all categories",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1559766208941,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "8bc77721-cd0b-fa8d-7e6f-caf37bf2ff0e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/books/add",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "isbn",
+					"value": "978-INVALID-ISBN-1491905012",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "Modern PHP: New Features and Good Practices",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Josh Lockhart",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "18.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currency",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1559766048046,
+			"name": "Post a Book via invalid ISBN",
+			"description": "",
+			"collectionId": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+			"responses": []
+		},
+		{
+			"id": "9076c110-f6c6-0938-a6a1-3a5a653a5686",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/books/filter?category=PHP",
+			"queryParams": [
+				{
+					"key": "category",
+					"value": "PHP",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+			"data": [
+				{
+					"key": "isbn",
+					"value": "978-INVALID-ISBN-1491905012",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "Modern PHP: New Features and Good Practices",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Josh Lockhart",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "18.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currency",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Gat all Book ISBN, filtered by category: PHP",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1559766279164,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a2fc28c7-eacc-62d5-6885-6cf9250d2366",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/books/add",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+			"data": [
+				{
+					"key": "isbn",
+					"value": "978-1491905012",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "Modern PHP: New Features and Good Practices",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Josh Lockhart",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "18.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currency",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Post a valid Book",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1559765978107,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "d4bbff6f-2a09-97d0-ad13-5e2c282612ac",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/books/filter?category=linux&author=Robin%20Nixon",
+			"queryParams": [
+				{
+					"key": "category",
+					"value": "linux",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Robin%20Nixon",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c2dcb018-768d-66aa-df22-46f6e5f147f2",
+			"data": [
+				{
+					"key": "isbn",
+					"value": "978-INVALID-ISBN-1491905012",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "Modern PHP: New Features and Good Practices",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"value": "Josh Lockhart",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "18.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currency",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Gat all Book ISBN, filtered by category: PHP where author is Robin Nixon",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1559766321596,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

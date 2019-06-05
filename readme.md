@@ -72,13 +72,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Install
-
+```
 $ composer install
 $ php artisan migrate:refresh --seed
 $ php artisan serve
-
+```
 ## Testing
 
+use postman with postman file: `postman/HubSolv.postman_collection.json`
+
+Or use:
+```
 GET:http://localhost:8000/api/books
 GET:http://localhost:8000/api/books/filter?author=Robin%20Nixon
 GET:http://localhost:8000/api/books/filter?author=Christopher%20Negus
@@ -88,24 +92,24 @@ GET:http://localhost:8000/api/books/filter?category=PHP
 GET:http://localhost:8000/api/books/filter?category=linux&author=Robin%20Nixon
 
 POST:http://localhost:8000/api/books/add
-data: 
+body: 
 {
     isbn: '978-1491905012',
     title: 'Modern PHP: New Features and Good Practices',
     author: 'Josh Lockhart',
     category: 'PHP',
     price: 18.99,
-    curency: 'GBP'
+    currency: 'GBP'
 }
 
 POST:http://localhost:8000/api/books/add
-data: 
+body: 
 {
     isbn: '978-INVALID-ISBN-1491905012',
     title: 'Modern PHP: New Features and Good Practices',
     author: 'Josh Lockhart',
     category: 'PHP',
     price: 18.99,
-    curency: 'GBP'
+    currency: 'GBP'
 }
-
+```
