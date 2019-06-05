@@ -73,4 +73,17 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 ## Install
 
+$ composer install
 $ php artisan migrate:refresh --seed
+$ php artisan serve
+
+## Testing
+
+GET:http://localhost:8000/api/books
+GET:http://localhost:8000/api/books/filter?author=Robin%20Nixon
+GET:http://localhost:8000/api/books/filter?author=Christopher%20Negus
+GET:http://localhost:8000/api/books/categories
+GET:http://localhost:8000/api/books/filter?category=Linux
+GET:http://localhost:8000/api/books/filter?category=PHP
+GET:http://localhost:8000/api/books/filter?category=linux&author=Robin%20Nixon
+

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Book;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $books = Book::all();
         return response()->json($books);
@@ -82,5 +83,29 @@ class BookController extends Controller
     public function destroy(Book $book)
     {
         //
+    }
+    
+    /**
+     * Display a filtered list of the resources.
+     * 
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function filter(Request $request) {
+        $books = Book::query();
+        if ($request->has('author')) {
+            $books->where('author', 'like', '%' . $request->author . '%');
+        }
+        if ($request->has('category')) {
+            $books->where('category', 'like', '%' . $request->category . '%');
+        }
+        return response()->json($books->get(['isbn']));
+    }
+    
+    
+    public function categories() {
+        $books = Book::query();
+        $books->groupBy('category');
+        return response()->json($books->get(['category']));
     }
 }

@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/books', 'BookController@index')->name('books.all');
+Route::get('/books/filter', 'BookController@filter')->name('books.filter');
+Route::get('/books/categories', 'BookController@categories')->name('books.categories');
