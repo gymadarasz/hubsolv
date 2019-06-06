@@ -41,7 +41,7 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-                    'isbn' => 'required|regex:/\d{3}-\d{10}/',
+            'isbn' => 'required|regex:/\d{3}-\d{10}/', // TODO: may add request object if a validation getting more complex in the future
         ]);
 
         if ($validator->fails()) {
@@ -78,6 +78,7 @@ class BookController extends Controller
 
     /**
      * Retrieves an array of given categories, even if it's a comma separated string
+     * (user input could be anything)
      *
      * @param array|string $request
      * @return array
@@ -94,6 +95,7 @@ class BookController extends Controller
 
     /**
      * Resolves a category ID, even if a given category name is a string
+     * (user input could be anything)
      *
      * @param string|int $category
      * @return int
@@ -162,16 +164,24 @@ class BookController extends Controller
      */
     public function filter(Request $request)
     {
-        $fields = ['*']; // TODO: add only needed fields
+        $fields = ['isbn', 'title', 'author', 'price', 'currency'];
         $books = Book::query();
         if ($request->has('author')) {
             $books->where('author', 'like', '%' . $request->author . '%');
         }
         if ($request->has('category')) {
+            $categories = $this->resolveCategories($request);
             $books
-                    ->join('book_category_relations', 'books.id', '=', 'book_id')
-                    ->join('categories', 'categories.id', '=', 'category_id');
-            $books->where('categories.name', 'like', '%' . $request->category . '%');
+                ->join('book_category_relations', 'books.id', '=', 'book_id')
+                ->join('categories', 'categories.id', '=', 'category_id');
+            // add all categories to where
+            foreach($categories as $category) {
+                if (is_numeric($category)) {
+                    $books->orWhere('categories.id', '=', $request->category);
+                } else {
+                    $books->orWhere('categories.name', 'like', '%' . trim($request->category) . '%');
+                }
+            }
         }
         if ($request->has('isbn') || $request->isbn) {
             $books->where('isbn', 'like', '%' . $request->isbn . '%');

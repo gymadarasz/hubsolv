@@ -83,6 +83,7 @@ $ php artisan serve
 ## Testing
 
 ```
+$ php artisan migrate:refresh --seed
 $ vendor/bin/phpunit
 ```
 
