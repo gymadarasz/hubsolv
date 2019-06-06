@@ -72,9 +72,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Install
+
+create a database and set up your `.env` file
 ```
 $ composer install
 $ php artisan migrate:refresh --seed
+$ php artisan key:generate
 $ php artisan serve
 ```
 ## Testing
