@@ -79,7 +79,11 @@ $ php artisan serve
 ```
 ## Testing
 
-use postman with postman file: `postman/HubSolv.postman_collection.json`
+```
+$ vendor/bin/phpunit
+```
+
+Or use postman with postman file: `postman/HubSolv.postman_collection.json`
 
 Or use:
 ```
@@ -97,7 +101,7 @@ body:
     isbn: '978-1491905012',
     title: 'Modern PHP: New Features and Good Practices',
     author: 'Josh Lockhart',
-    category: 'PHP',
+    categories: 'PHP',
     price: 18.99,
     currency: 'GBP'
 }
@@ -108,7 +112,7 @@ body:
     isbn: '978-INVALID-ISBN-1491905012',
     title: 'Modern PHP: New Features and Good Practices',
     author: 'Josh Lockhart',
-    category: 'PHP',
+    categories: 'PHP',
     price: 18.99,
     currency: 'GBP'
 }
