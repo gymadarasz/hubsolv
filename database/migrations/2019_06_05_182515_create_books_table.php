@@ -13,7 +13,6 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
-
         Schema::dropIfExists('books');
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');

@@ -4,7 +4,6 @@ use Illuminate\Database\Seeder;
 
 class BooksTableSeeder extends Seeder
 {
-    
     protected $mock = [
         ['isbn' => '978-1491918661', 'title' => 'Learning PHP, MySQL & JavaScript: With jQuery, CSS & HTML5', 'author' => 'Robin Nixon', 'price' => 9.99, 'currency' => 'GBP'],
         ['isbn' => '978-0596804848', 'title' => 'Ubuntu: Up and Running: A Power User\'s Desktop Guide', 'author' => 'Robin Nixon', 'price' => 12.99, 'currency' => 'GBP'],

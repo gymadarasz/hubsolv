@@ -8,7 +8,8 @@ class Book extends Model
 {
     protected $fillable = ['isbn', 'title', 'author', 'price', 'currency'];
     
-    public function categories() {
+    public function categories()
+    {
         return $this->belongsToMany('App\\Category', 'book_category_relations', 'book_id', 'category_id');
     }
 }

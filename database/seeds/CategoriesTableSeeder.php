@@ -4,7 +4,6 @@ use Illuminate\Database\Seeder;
 
 class CategoriesTableSeeder extends Seeder
 {
-    
     protected $mock = [
         ['name' => 'PHP'],
         ['name' => 'Linux'],

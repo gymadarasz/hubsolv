@@ -27,7 +27,8 @@ class BooksTest extends TestCase
         $this->assertEquals(200, $response->getStatusCode());
     }
     
-    public function testGetBookByAuthor() {
+    public function testGetBookByAuthor()
+    {
         $request = Request::create('/api/books/filter?author=Robin%20Nixon');
         $controller = new BookController();
         $response = $controller->filter($request);
@@ -37,7 +38,8 @@ class BooksTest extends TestCase
         $this->assertEquals(200, $response->getStatusCode());
     }
     
-    public function testGetBookByCategory() {
+    public function testGetBookByCategory()
+    {
         $request = Request::create('/api/books/filter?category=Linux');
         $controller = new BookController();
         $response = $controller->filter($request);
@@ -47,7 +49,8 @@ class BooksTest extends TestCase
         $this->assertEquals(200, $response->getStatusCode());
     }
     
-    public function testGetBookByCategoryAndAuthor() {
+    public function testGetBookByCategoryAndAuthor()
+    {
         $request = Request::create('/api/books/filter?category=PHP&author=Robin Nixon');
         $controller = new BookController();
         $response = $controller->filter($request);
@@ -56,7 +59,8 @@ class BooksTest extends TestCase
         $this->assertEquals(200, $response->getStatusCode());
     }
     
-    public function testGetOneBookOnly() {
+    public function testGetOneBookOnly()
+    {
         $request = Request::create('/api/books/filter?isbn=978-1491918661');
         $controller = new BookController();
         $response = $controller->filter($request);
@@ -65,7 +69,8 @@ class BooksTest extends TestCase
         $this->assertEquals(200, $response->getStatusCode());
     }
     
-    public function testGetOneBookOnly2() {
+    public function testGetOneBookOnly2()
+    {
         $request = Request::create('/api/book/978-1491918661');
         $controller = new BookController();
         $response = $controller->filter($request);
@@ -74,7 +79,8 @@ class BooksTest extends TestCase
         $this->assertEquals(200, $response->getStatusCode());
     }
     
-    public function testGetAllCategories() {
+    public function testGetAllCategories()
+    {
         $request = Request::create('/api/categories');
         $controller = new CategoryController();
         $response = $controller->index($request);
@@ -85,7 +91,8 @@ class BooksTest extends TestCase
         $this->assertEquals(200, $response->getStatusCode());
     }
     
-    public function testStoreBook() {
+    public function testStoreBook()
+    {
         $request = Request::create('/api/books/add', 'POST', [
             "isbn" => "978-1491905012",
             "title" => "Modern PHP: New Features and Good Practices",
@@ -101,7 +108,8 @@ class BooksTest extends TestCase
         $this->assertEquals(201, $response->getStatusCode());
     }
     
-    public function testStoreBookShouldFails() {
+    public function testStoreBookShouldFails()
+    {
         $request = Request::create('/api/books/add', 'POST', [
             "isbn" => "978-INVALID-1491905012",
             "title" => "Modern PHP: New Features and Good Practices",
@@ -116,6 +124,4 @@ class BooksTest extends TestCase
         $this->assertStringContainsString('Invalid ISBN', $contents);
         $this->assertEquals(400, $response->getStatusCode());
     }
-    
-    
 }
