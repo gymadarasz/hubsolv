@@ -21,3 +21,4 @@ Route::get('/books', 'BookController@index')->name('books.all');
 Route::get('/books/filter', 'BookController@filter')->name('books.filter');
 Route::get('/books/categories', 'BookController@categories')->name('books.categories');
 Route::post('/books/add', 'BookController@store')->name('books.store');
+Route::get('/book/{isbn}', 'BookController@filter')->name('books.filter');

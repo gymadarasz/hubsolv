@@ -109,6 +109,10 @@ class BookController extends Controller
         if ($request->has('category')) {
             $books->where('category', 'like', '%' . $request->category . '%');
         }
+        if ($request->has('isbn') || $request->isbn) {
+            $books->where('isbn', 'like', '%' . $request->isbn . '%');
+            return response()->json($books->get(['*']));
+        }
         return response()->json($books->get(['isbn']));
     }
     
